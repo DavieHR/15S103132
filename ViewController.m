@@ -1,9 +1,10 @@
+//�޸�4
 //
 //  ViewController.m
 //  mxphotoshop
 //
 //  Created by star on 16/6/16.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -117,7 +118,7 @@
     lvc.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
     [self presentViewController:lvc animated:YES completion:nil];
     [lvc didLogin:^(NSString *username) {
-        NSString* welcome=[NSString stringWithFormat:@"欢迎您  "];
+        NSString* welcome=[NSString stringWithFormat:@"欢迎�? "];
         welcome=[welcome stringByAppendingString:username];
         _l.text=welcome;
         [_b setHidden:YES];

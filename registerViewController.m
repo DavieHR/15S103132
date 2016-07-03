@@ -1,9 +1,10 @@
+// �޸�2
 //
 //  registerViewController.m
 //  mxphotoshop
 //
 //  Created by star on 16/6/19.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
 
 #import "registerViewController.h"
@@ -60,7 +61,7 @@
     unsigned long i=[res count];
     if(i!=0)
     {
-        UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"用户已存在。" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"用户已存在�?" preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction* ok=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             _regView.passt.text=@"";
             _regView.suret.text=@"";
@@ -73,7 +74,7 @@
         User* user=[NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:MOC];
         if([_regView.namet.text isEqual:@""]||[_regView.passt.text isEqual:@""]||[_regView.suret.text isEqual:@""])
         {
-            UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"请输入用户名密码。" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"请输入用户名密码�? preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction* ok=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 _regView.passt.text=@"";
                 _regView.suret.text=@"";
@@ -85,7 +86,7 @@
         {
             if(_regView.passt.text!=_regView.suret.text)
             {
-                UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"密码不一致，请重新输入。" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"密码不一致，请重新输入�?" preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction* ok=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     _regView.passt.text=@"";
                     _regView.suret.text=@"";
@@ -98,7 +99,7 @@
                 user.name=_regView.namet.text;
                 user.psw=_regView.passt.text;
                 [[coreManager sharedManager] saveContext];
-                UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"注册成功。" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"注册成功�? preferredStyle:UIAlertControllerStyleAlert];
                 UIAlertAction* ok=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                     [self dismissViewControllerAnimated:YES completion:nil];
                 }];

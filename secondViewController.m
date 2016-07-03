@@ -1,9 +1,10 @@
+// �޸�3
 //
 //  secondViewController.m
 //  mxphotoshop
 //
 //  Created by star on 16/6/18.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
 
 #import "WXApi.h"
@@ -126,9 +127,9 @@ static NSMutableArray *colors;
     _s=[[UIButton alloc] initWithFrame:CGRectMake(270, 580, 30, 30)];
     _m=[[UIButton alloc] initWithFrame:CGRectMake(302, 580, 30, 30)];
     _l=[[UIButton alloc] initWithFrame:CGRectMake(334, 580, 30, 30)];
-    [_s setTitle:@"细" forState:UIControlStateNormal];
-    [_m setTitle:@"中" forState:UIControlStateNormal];
-    [_l setTitle:@"粗" forState:UIControlStateNormal];
+    [_s setTitle:@"�? forState:UIControlStateNormal];
+    [_m setTitle:@"�? forState:UIControlStateNormal];
+    [_l setTitle:@"�? forState:UIControlStateNormal];
     //[_s setBackgroundColor:[UIColor grayColor]];
     //[_m setBackgroundColor:[UIColor grayColor]];
     //[_l setBackgroundColor:[UIColor grayColor]];
@@ -221,7 +222,7 @@ static NSMutableArray *colors;
     UIImage* image=UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageWriteToSavedPhotosAlbum(image,self,nil,nil);
-    UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"成功保存为相册图片。" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController* alert=[UIAlertController alertControllerWithTitle:@"提示" message:@"成功保存为相册图片�?" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* ok=[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:ok];
     [self presentViewController:alert animated:YES completion:nil];
@@ -316,17 +317,17 @@ static NSMutableArray *colors;
 -(void)lineSet1
 {
     [_drawView setlineWidth:0];
-    [_line setTitle:@"细" forState:UIControlStateNormal];
+    [_line setTitle:@"�? forState:UIControlStateNormal];
 }
 -(void)lineSet2
 {
     [_drawView setlineWidth:1];
-    [_line setTitle:@"中" forState:UIControlStateNormal];
+    [_line setTitle:@"�? forState:UIControlStateNormal];
 }
 -(void)lineSet3
 {
     [_drawView setlineWidth:2];
-    [_line setTitle:@"粗" forState:UIControlStateNormal];
+    [_line setTitle:@"�? forState:UIControlStateNormal];
 }
 
 -(BOOL)prefersStatusBarHidden

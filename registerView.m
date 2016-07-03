@@ -1,9 +1,11 @@
+// �޸�1
+
 //
 //  registerView.m
 //  mxphotoshop
 //
 //  Created by star on 16/6/20.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
 
 #import "registerView.h"
@@ -25,7 +27,7 @@
         _name=[[UILabel alloc]init];
         _pass=[[UILabel alloc]init];
         _sure=[[UILabel alloc]init];
-        [_name setText:@"用户名:"];
+        [_name setText:@"用户�?"];
         [_pass setText:@"密码:"];
         [_sure setText:@"确认:"];
         _name.textAlignment=NSTextAlignmentCenter;
