@@ -3,9 +3,9 @@
 //  mxphotoshop
 //
 //  Created by star on 16/6/23.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
-
+// change1
 #import "CAViewController.h"
 
 @interface CAViewController ()

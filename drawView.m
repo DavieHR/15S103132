@@ -3,9 +3,9 @@
 //  mxphotoshop
 //
 //  Created by star on 16/6/21.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
-
+// change3 
 #import "drawView.h"
 
 @implementation drawView
@@ -14,24 +14,18 @@
 static NSMutableArray *colorArray;
 //保存被移除的线条颜色
 static NSMutableArray *deleColorArray;
-//每次触摸结束前经过的点，形成线的点数组
-static NSMutableArray *pointArray;
-//每次触摸结束后的线数组
-static NSMutableArray *lineArray;
+//每次触摸结束前经过的点，形成线的点数�?static NSMutableArray *pointArray;
+//每次触摸结束后的线数�?static NSMutableArray *lineArray;
 //删除的线的数组，方便重做时取出来
 static NSMutableArray *deleArray;
-//线条宽度的数组
-static float lineWidthArray[3]={4.0,12.0,20.0};
-//删除线条时删除的线条宽度储存的数组
-static NSMutableArray *deleWidthArray;
+//线条宽度的数�?static float lineWidthArray[3]={4.0,12.0,20.0};
+//删除线条时删除的线条宽度储存的数�?static NSMutableArray *deleWidthArray;
 //正常存储的线条宽度的数组
 static NSMutableArray *WidthArray;
-//确定颜色的值，将颜色计数的值存到数组里默认为0，即为绿色
-static int colorCount;
-//确定宽度的值，将宽度计数的值存到数组里默认为0，即为10
+//确定颜色的�?，将颜色计数的�?存到数组里默认为0，即为绿�?static int colorCount;
+//确定宽度的�?，将宽度计数的�?存到数组里默认为0，即�?0
 static int widthCount;
-//保存颜色的数组
-static NSMutableArray *colors;
+//保存颜色的数�?static NSMutableArray *colors;
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -46,8 +40,7 @@ static NSMutableArray *colors;
         deleArray=[[NSMutableArray alloc]init];
         colorArray=[[NSMutableArray alloc]init];
         deleColorArray=[[NSMutableArray alloc]init];
-        //颜色和宽度默认都取当前数组第0位为默认值
-        colorCount=0;
+        //颜色和宽度默认都取当前数组第0位为默认�?        colorCount=0;
         widthCount=0;
         // Initialization code
     }
@@ -74,10 +67,9 @@ static NSMutableArray *colors;
     CGContextSetLineWidth(context, 10.0f);
     //线条拐角样式，设置为平滑
     CGContextSetLineJoin(context,kCGLineJoinRound);
-    //线条开始样式，设置为平滑
+    //线条�?��样式，设置为平滑
     CGContextSetLineCap(context, kCGLineCapRound);
-    //查看lineArray数组里是否有线条，有就将之前画的重绘，没有只画当前线条
-    if ([lineArray count]>0) {
+    //查看lineArray数组里是否有线条，有就将之前画的重绘，没有只画当前线�?    if ([lineArray count]>0) {
         for (int i=0; i<[lineArray count]; i++) {
             NSArray * array=[NSArray
                              arrayWithArray:[lineArray objectAtIndex:i]];
@@ -112,8 +104,7 @@ static NSMutableArray *colors;
             }
         }
     }
-    //画当前的线
-    if ([pointArray count]>0)
+    //画当前的�?    if ([pointArray count]>0)
     {
         CGContextBeginPath(context);
         CGPoint myStartPoint=CGPointFromString([pointArray objectAtIndex:0]);
@@ -134,14 +125,12 @@ static NSMutableArray *colors;
     }
 }
 
-//在touch结束前将获取到的点，放到pointArray里
--(void)addPA:(CGPoint)nPoint{
+//在touch结束前将获取到的点，放到pointArray�?-(void)addPA:(CGPoint)nPoint{
     NSString *sPoint=NSStringFromCGPoint(nPoint);
     [pointArray addObject:sPoint];
 }
 
-//在touchend时，将已经绘制的线条的颜色，宽度，线条线路保存到数组里
--(void)addLA{
+//在touchend时，将已经绘制的线条的颜色，宽度，线条线路保存到数组�?-(void)addLA{
     NSNumber *wid=[[NSNumber alloc]initWithInt:widthCount];
     NSNumber *num=[[NSNumber alloc]initWithInt:colorCount];
     [colorArray addObject:num];
@@ -152,14 +141,14 @@ static NSMutableArray *colors;
 }
 
 #pragma mark -
-//手指开始触屏开始
+//手指�?��触屏�?��
 static CGPoint MyBeganpoint;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 }
 
-//手指移动时候发出
+//手指移动时�?发出
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch* touch=[touches anyObject];
@@ -169,13 +158,12 @@ static CGPoint MyBeganpoint;
     [self setNeedsDisplay];
 }
 
-//当手指离开屏幕时候
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//当手指离�?��幕时�?-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self addLA];
 }
 
-//撤销，将当前最后一条信息移动到删除数组里，方便恢复时调用
+//撤销，将当前�?���?��信息移动到删除数组里，方便恢复时调用
 -(void)revocation
 {
     if ([lineArray count]) {
@@ -214,8 +202,7 @@ static CGPoint MyBeganpoint;
 
 -(void)clear
 {
-    //移除所有信息并重绘
-    [deleArray removeAllObjects];
+    //移除�?��信息并重�?    [deleArray removeAllObjects];
     [deleColorArray removeAllObjects];
     colorCount=0;
     [colorArray removeAllObjects];

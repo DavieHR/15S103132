@@ -3,9 +3,9 @@
 //  mxphotoshop
 //
 //  Created by star on 16/6/18.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
-
+// change 2
 #import "coreManager.h"
 
 @implementation coreManager
@@ -26,7 +26,7 @@
     }
     
     // **** 注意 ***
-    // 这里的CoreDataTest就是你刚才建立的数据模型的名字，一定要一致，否则会报错。
+    // 这里的CoreDataTest就是你刚才建立的数据模型的名字，�?��要一致，否则会报错�?
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"userModel" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
@@ -42,7 +42,7 @@
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     
     // **** 注意 ***
-    // 这里的CoreDataTest.sqlite也应该与数据模型的名字保持一致，否则会报错。
+    // 这里的CoreDataTest.sqlite也应该与数据模型的名字保持一致，否则会报错�?
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"userModel.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
