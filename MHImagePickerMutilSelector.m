@@ -3,9 +3,9 @@
 //  doujiazi
 //
 //  Created by Shine.Yuan on 12-8-7.
-//  Copyright (c) 2012年 mooho.inc. All rights reserved.
+//  Copyright (c) 2012�?mooho.inc. All rights reserved.
 //
-
+// change5
 #import "MHImagePickerMutilSelector.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -54,7 +54,7 @@
         [textlabel setBackgroundColor:[UIColor clearColor]];
         [textlabel setFont:[UIFont systemFontOfSize:14.0f]];
         [textlabel setTextColor:[UIColor whiteColor]];
-        [textlabel setText:@"当前选中0张(最多10张)"];
+        [textlabel setText:@"当前选中0�?�?��10�?"];
         [selectedPan addSubview:textlabel];
         
         UIButton*   btn_done=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -156,7 +156,7 @@
 
 -(void)updateTableView
 {
-    textlabel.text=[NSString stringWithFormat:@"当前选中%lu张(最多10张)",(unsigned long)pics.count];
+    textlabel.text=[NSString stringWithFormat:@"当前选中%lu�?�?��10�?",(unsigned long)pics.count];
     
     [tbv reloadData];
     

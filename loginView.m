@@ -3,9 +3,9 @@
 //  mxphotoshop
 //
 //  Created by star on 16/6/19.
-//  Copyright © 2016年 apple. All rights reserved.
+//  Copyright © 2016�?apple. All rights reserved.
 //
-
+// change4
 #import "loginView.h"
 
 @implementation loginView
@@ -23,7 +23,7 @@
     {
         _name=[[UILabel alloc]init];
         _pass=[[UILabel alloc]init];
-        [_name setText:@"用户名:"];
+        [_name setText:@"用户�?"];
         [_pass setText:@"密码:"];
         _name.textAlignment=NSTextAlignmentCenter;
         _pass.textAlignment=NSTextAlignmentCenter;
